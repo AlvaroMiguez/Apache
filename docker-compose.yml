@@ -7,3 +7,10 @@ services:
       - ./paginas:/usr/local/apache2/htdocs
 
     container_name: asir_web1
+  asir_web2: 
+    image: httpd:2.4
+    ports:
+      - "9080:80"
+    volumes:
+      - ./paginas:/usr/local/apache2/htdocs
+    container_name: asir_web2
