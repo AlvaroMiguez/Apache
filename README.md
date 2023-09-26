@@ -1,7 +1,5 @@
 # # Bitacora
 
 ## mapeo de puertos
-/home/SRI/Apache/paginas
-hacer en casa mañana
-apuntes
+Repasar el unir dos contenedores a la misma web
 ## mapeo de puertos
