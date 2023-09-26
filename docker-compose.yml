@@ -21,7 +21,8 @@ services:
       my-network:
         ipv4_address: 172.28.0.40
 networks:
-  ipam:
-    config:
-      - subnet: 172.28.0.0/16
-        gateway: 172.28.0.1
+  my-network:
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
+          gateway: 172.28.0.1
