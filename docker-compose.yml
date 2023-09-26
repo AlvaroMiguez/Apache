@@ -7,6 +7,11 @@ services:
       - ./paginas:/usr/local/apache2/htdocs
 
     container_name: asir_web1
+    networks:
+      red_web:
+        ipv4_address: 172.28.0.0
+      red_interna:
+        ipv4_address: 172.28.0.30
   asir_web2: 
     image: httpd:2.4
     ports:
@@ -14,3 +19,8 @@ services:
     volumes:
       - ./paginas:/usr/local/apache2/htdocs
     container_name: asir_web2
+  networks:
+      red_web:
+        ipv4_address: 172.28.0.0
+      red_interna:
+        ipv4_address: 172.28.0.40
