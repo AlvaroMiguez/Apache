@@ -1,0 +1,11 @@
+services:
+  asir_bind9:
+    image: internetsystemsconsortium/bind9:9.18
+    container_name: asir_bind9
+    ports:
+      - "53:53"
+    volumes:
+      - ./config:/etc/bind
+      - ./lib:/var/lib/bind  
+    environment:
+      - TZ=Europe/Paris
