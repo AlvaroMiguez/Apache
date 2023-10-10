@@ -9,7 +9,7 @@ services:
     container_name: asir_web1
     networks:
       my-network:
-        ipv4_address: 172.28.0.30
+        ipv4_address: 172.29.0.30
   asir_web2: 
     image: httpd:2.4
     ports:
@@ -19,10 +19,10 @@ services:
     container_name: asir_web2
     networks:
       my-network:
-        ipv4_address: 172.28.0.40
+        ipv4_address: 172.29.0.40
 networks:
   my-network:
     ipam:
       config:
-        - subnet: 172.28.0.0/16
-          gateway: 172.28.0.1
+        - subnet: 172.29.0.0/16
+          gateway: 172.29.0.1
