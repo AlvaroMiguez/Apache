@@ -7,10 +7,13 @@ services:
     platform: linux/amd64
     ports:
       - 53:53
+      #Mapeo de puertos
     networks:
+    #Creamos la red y le damos ip al DNS
       bind9_subnet:
         ipv4_address: 172.28.5.1
     volumes:
+    #Volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
       - ./logs:/var/log/bind
