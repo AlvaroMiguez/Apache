@@ -1,5 +1,5 @@
 services:
-  asir_bind9:
+  asir_bind9-2:
     container_name: asir_bind9-2
     image: ubuntu/bind9
     # usamos esta imagen para ver los logs
