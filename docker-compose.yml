@@ -1,14 +1,36 @@
 services:
-  asir_web1-2:
-    container_name: asir_web1-2
-    image: httpd:2.4
+  asir_apache:
+    container_name: asir_apache
+    image: httpd:latest
     ports:
-      - "8000:80"
+      - "80:80"
     networks:
-      bind9_subnet:
-        ipv4_address: 172.28.5.30
+      mi-red:
+        ipv4_address: 10.1.0.50
     volumes:
       - ./paginas:/usr/local/apache2/htdocs
+      - ./conf:/usr/local/apache2/conf
+asir_bind9-2:
+    container_name: asir_bind9-2
+    image: ubuntu/bind9
+    # usamos esta imagen para ver los logs
+    # la imagen internetconsortium no muestra logs
+    platform: linux/amd64
+    ports:
+      - 53:53
+      #Mapeo de puertos
+    networks:
+    #Creamos la red y le damos ip al DNS
+      mi-red:
+        ipv4_address: 10.1.0.2
+    volumes:
+    #Volumenes
+      - ./config:/etc/bind
+      - ./lib:/var/lib/bind
 networks:
-  bind9_subnet:
-    external: true
+  mi-red:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/16 
+          gateway: 10.1.0.1
