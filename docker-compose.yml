@@ -4,11 +4,11 @@ services:
     image: httpd:2.4
     ports:
       - "8000:80"
+    networks:
+      bind9_subnet:
+        ipv4_address: 172.28.5.30
     volumes:
       - ./paginas:/usr/local/apache2/htdocs
-    networks:
-    bind9_subnet:
-        ipv4_address: 172.28.5.30
 networks:
   bind9_subnet:
     external: true
