@@ -16,3 +16,6 @@ services:
     #Volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
+networks:
+  bind9_subnet:
+    external: true
