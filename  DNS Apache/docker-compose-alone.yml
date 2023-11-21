@@ -16,4 +16,3 @@ services:
     #Mapeo de volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
-      - ./logs:/var/log/bind
