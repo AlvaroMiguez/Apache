@@ -1,6 +1,6 @@
 services:
   asir_bind9:
-    container_name: asir_bind9-2
+    container_name: asir_bind9
     image: ubuntu/bind9
     # usamos esta imagen para ver los logs
     # la imagen internetconsortium no muestra logs
@@ -13,6 +13,18 @@ services:
       bind9_subnet:
         ipv4_address: 172.28.5.1
     volumes:
-    #Mapeo de volumenes
+    #Volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
+      - ./logs:/var/log/bind
+  cliente:
+    container_name: asir_cliente
+    image: ubuntu
+    platform: linux/amd64
+    tty: true
+    stdin_open: true
+    networks:
+      - bind9_subnet
+networks:
+  bind9_subnet:
+    external: true
