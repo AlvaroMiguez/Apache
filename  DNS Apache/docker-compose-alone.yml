@@ -9,7 +9,7 @@ services:
       - 53:53
       #Mapeo de puertos
     volumes:
-    #Volumenes
+    #Mapeo de volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
       - ./logs:/var/log/bind
