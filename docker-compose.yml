@@ -1,6 +1,6 @@
 services:
-  asir_apache:
-    container_name: asir_apache
+  asir_apache-2:
+    container_name: asir_apache-2
     image: httpd:latest
     ports:
       - "80:80"
