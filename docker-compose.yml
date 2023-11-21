@@ -10,7 +10,7 @@ services:
     volumes:
       - ./paginas:/usr/local/apache2/htdocs
       - ./conf:/usr/local/apache2/conf
-asir_bind9-2:
+  asir_bind9-2:
     container_name: asir_bind9-2
     image: ubuntu/bind9
     # usamos esta imagen para ver los logs
