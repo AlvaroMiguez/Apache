@@ -1,7 +1,1 @@
-# # Bitacora
-
-## mapeo de puertos
-
-## Crear DNS
-### Logs
-  
+# #ver en docker hub la creacion de httpd.conf y mime.types
