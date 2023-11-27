@@ -25,8 +25,8 @@ services:
         ipv4_address: 10.1.0.2
     volumes:
     #Volumenes
-      - ./DNS_Apache/config:/etc/bind
-      - ./DNS_Apache/lib:/var/lib/bind
+      - ./config:/etc/bind
+      - ./lib:/var/lib/bind
 networks:
   mi-red:
     ipam:
