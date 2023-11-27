@@ -35,7 +35,8 @@ services:
     tty: true
     stdin_open: true
     networks:
-      - mi-red
+      mi-red:
+        ipv4_address: 10.1.0.15
 networks:
   mi-red:
     ipam:
