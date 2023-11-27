@@ -1,14 +1,15 @@
-zone "fabulasoscuras.int" {
+
+zone "fabulasmaravillosas.int" {
 	type master;
-	file "/var/lib/bind/db.fabulasoscuras.int.";
+	file "/var/lib/bind/db.fabulasmaravillosas.int";
 	allow-query {
 		any;
 		};
 	};
 
-zone "fabulasmaravillosas.int" {
+zone "fabulasoscuras.int" {
 	type master;
-	file "/var/lib/bind/db.fabulasmaravillosas.int.";
+	file "/var/lib/bind/db.fabulasoscuras.int";
 	allow-query {
 		any;
 		};
