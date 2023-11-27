@@ -7,6 +7,7 @@ services:
     networks:
       mi-red:
         ipv4_address: 10.1.0.50
+        # ip fija del contenedor
     volumes:
       - ./paginas:/usr/local/apache2/htdocs
       - ./conf:/usr/local/apache2/conf
