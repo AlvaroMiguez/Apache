@@ -28,8 +28,8 @@ services:
     #Volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
-  cliente:
-    container_name: asir_cliente
+  cliente-2:
+    container_name: asir_cliente-2
     image: ubuntu
     platform: linux/amd64
     tty: true
