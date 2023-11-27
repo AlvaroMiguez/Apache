@@ -33,7 +33,8 @@ services:
     image: ubuntu
     platform: linux/amd64
     networks:
-      - mi-red
+      mi-red:
+       ipv4_address: 10.1.0.5
     tty: true
     stdin_open: true
     dns:
