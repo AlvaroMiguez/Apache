@@ -28,6 +28,14 @@ services:
     #Volumenes
       - ./config:/etc/bind
       - ./lib:/var/lib/bind
+  cliente:
+    container_name: asir_cliente
+    image: ubuntu
+    platform: linux/amd64
+    tty: true
+    stdin_open: true
+    networks:
+      - mi-red
 networks:
   mi-red:
     ipam:
