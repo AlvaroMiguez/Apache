@@ -38,7 +38,6 @@ services:
     stdin_open: true
     dns:
       - 10.1.0.2
-    
 networks:
   mi-red:
     ipam:
