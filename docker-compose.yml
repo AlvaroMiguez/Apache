@@ -27,7 +27,7 @@ services:
     volumes:
     #Volumenes
       - ./config:/etc/bind
-      - ./lib:/var/lib/bind
+      - ./zonas:/var/lib/bind
   cliente-2:
     container_name: asir_cliente-2
     image: ubuntu
