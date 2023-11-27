@@ -32,13 +32,13 @@ services:
     container_name: asir_cliente-2
     image: ubuntu
     platform: linux/amd64
+    networks:
+      - mi-red
     tty: true
     stdin_open: true
     dns:
       - 10.1.0.2
-    networks:
-      mi-red:
-        ipv4_address: 10.1.0.15
+    
 networks:
   mi-red:
     ipam:
