@@ -146,7 +146,7 @@ networks:
 
         (httpd.conf)
 
-        En este archivo es donde hacemos los cambios en la configuración para el Apache y para copiar la configuración estándar hacemos `docker run --rm httpd:2.4 cat /usr/local/apache2/conf/httpd.conf > my-httpd.conf`
+        En este archivo es donde hacemos los cambios en la configuración  y para copiar la configuración estándar hacemos `docker run --rm httpd:2.4 cat /usr/local/apache2/conf/httpd.conf > httpd.conf`
 
 
 
