@@ -106,4 +106,37 @@ networks:
             };
         };
         ```
+
+        En zonas tenemos los siguientes archivos:
+
+        (db.fabulasoscuras.int)
+        ```
+        $TTL 38400	; 10 hours 40 minutes
+        @		IN SOA	ns.fabulasoscuras.int. some.email.address. (
+                        10000003   ; serial
+                        10800      ; refresh (3 hours)
+                        3600       ; retry (1 hour)
+                        604800     ; expire (1 week)
+                        38400      ; minimum (10 hours 40 minutes)
+                        )
+        @		IN NS		ns
+        ns		IN A		10.1.0.2
+         www		IN A		10.1.0.50
+        ```
+
+        (db.fabulasmaravillosas.int)
+
+        ```
+         $TTL 38400	; 10 hours 40 minutes
+        @		IN SOA	ns.fabulasmaravillosas.int. some.email.address. (
+                        10000004  ; serial
+                        10800      ; refresh (3 hours)
+                        3600       ; retry (1 hour)
+                        604800     ; expire (1 week)
+                        38400      ; minimum (10 hours 40 minutes)
+                        )
+        @		IN NS		ns
+        ns		IN A		10.1.0.1
+        www		IN A		10.1.0.50
+        ```
     - Configuración Apache
