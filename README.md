@@ -55,4 +55,7 @@ networks:
           gateway: 10.1.0.1
   #Configuramos un poco la red que vamos a utilizar en la práctica
 ```
-
+2. Configuración de los volumenes
+    - Configuración DNS
+    
+    - Configuración Apache
