@@ -147,7 +147,10 @@ networks:
         (httpd.conf)
 
         En este archivo es donde hacemos los cambios en la configuración  y para copiar la configuración estándar hacemos `docker run --rm httpd:2.4 cat /usr/local/apache2/conf/httpd.conf > httpd.conf`
-
+         
+        (mime.types)
+        
+        Este archivo solo es para copiar la configuración no haremos ningún cambio y para copiarla es igual que el anterior cambiando los https.conf por mime.types
 
 
 
