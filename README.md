@@ -65,7 +65,8 @@ networks:
         include "/etc/bind/named.conf.options";
         include "/etc/bind/named.conf.local";
         ```
-        (named.conf.local)
+        (named.conf.local) 
+        Este archivo es el único que hay que cambiar a diferencia de otras prácticas ya que hay que añadirle una zona más en el archivo.
         ```
         
         zone "fabulasmaravillosas.int" {
