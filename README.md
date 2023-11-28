@@ -57,6 +57,7 @@ networks:
 ```
 2. Configuración de los volumenes
     - Configuración DNS
+        
         Para el DNS tenemos los volúmenes config y zonas.
         En config tenemos los siguientes archivos:
 
