@@ -57,5 +57,31 @@ networks:
 ```
 2. Configuración de los volumenes
     - Configuración DNS
-    
+        Para el DNS tenemos los volúmenes config y zonas.
+        En config tenemos los siguientes archivos:
+
+        (named.conf)
+        ```
+        include "/etc/bind/named.conf.options";
+        include "/etc/bind/named.conf.local";
+        ```
+        (named.conf.local)
+        ```
+        
+        zone "fabulasmaravillosas.int" {
+            type master;
+            file "/var/lib/bind/db.fabulasmaravillosas.int";
+            allow-query {
+                any;
+                };
+            };
+
+        zone "fabulasoscuras.int" {
+            type master;
+            file "/var/lib/bind/db.fabulasoscuras.int";
+            allow-query {
+                any;
+                };
+            };
+        ```
     - Configuración Apache
