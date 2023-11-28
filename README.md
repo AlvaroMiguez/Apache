@@ -67,7 +67,7 @@ networks:
         include "/etc/bind/named.conf.local";
         ```
         (named.conf.local) 
-        
+
         Este archivo es el único que hay que cambiar a diferencia de otras prácticas ya que hay que añadirle una zona más en el archivo.
         ```
         
@@ -86,5 +86,24 @@ networks:
                 any;
                 };
             };
+        ```
+        (named.conf.options)
+        ```
+        options {
+            directory "/var/cache/bind";
+
+            forwarders {
+                8.8.8.8;
+                1.1.1.1;
+            } ;
+            forward only;
+
+            listen-on { any; };
+            listen-on-v6 { any; };
+
+            allow-query {
+                any;
+            };
+        };
         ```
     - Configuración Apache
