@@ -174,6 +174,12 @@ networks:
   DocumentRoot /paginas/maravillosas
   </VirtualHost>
   ```
+4. Comprobación
 
+  - Primero de todo entramos en el cliente y hacemos un `apt update` y  luego instalamos la herramienta ping con `apt install iputils-ping` y hacemos ping a fabulasoscuras y fabulasmaravillosas si funciona bien debería de funcionar.
+
+  - Luego hacemos un dig ha ambos por si acaso aunque debería de funcionar perfectamente
+  
+  - Por último hay dos opciones o instalas una opción de navegador en el cliente y así poder ver los dominios y sus respectivos index, por otro lado, si no quieres hacer eso cambias en los archivos de el equipo para que en el navegador puedan acceder ambos dominios y aparecerían si está bien hecho
 
 
