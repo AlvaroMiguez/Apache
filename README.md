@@ -149,10 +149,29 @@ networks:
         En este archivo es donde hacemos los cambios en la configuración  y para copiar la configuración estándar hacemos `docker run --rm httpd:2.4 cat /usr/local/apache2/conf/httpd.conf > httpd.conf`
          
         (mime.types)
-        
+
         Este archivo solo es para copiar la configuración no haremos ningún cambio y para copiarla es igual que el anterior cambiando los https.conf por mime.types
 
+3. Creación de los Virtual Host
 
+  (Virtual Host 1)
+
+  ```
+  <VirtualHost *:80>
+  ServerName www.fabulasoscuras.int
+  ServerAlias fabulasoscuras.int *.fabulasoscuras.int
+  DocumentRoot /paginas/oscuras
+  </VirtualHost>
+  ```
+
+  (Virtual Host 2)
+  ```
+  <VirtualHost *:80>
+  ServerName www.fabulasmaravillosas.int
+  ServerAlias fabulasmaravillosas.int *.fabulasmaravillosas.int
+  DocumentRoot /paginas/maravillosas
+  </VirtualHost>
+  ```
 
 
 
