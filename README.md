@@ -154,6 +154,8 @@ networks:
 
 3. Creación de los Virtual Host
 
+  Los Virtual Host se añaden al archivo de configuración al final del todo
+
   (Virtual Host 1)
 
   ```
